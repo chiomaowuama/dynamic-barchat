@@ -1,31 +1,26 @@
-const ctx = document.getElementById("canvas");
+async function getingdata() {
+  let responds = await fetch("data.json");
+  let datas = await responds.json();
+  let Data = datas.map((data) => {
+    return {
+      amount: data.amount,
+      day: data.day,
+    };
+  });
+  console.log(Data);
 
-new Chart(ctx, {
-  type: "bar",
-  data: {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-    datasets: [
-      {
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: "#ff335e",
-        borderColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-        ],
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  },
-});
+  Data.forEach((data) => {
+    let day = data.day.toLowerCase();
+    let amount = data.amount;
+
+    let barElement = document.getElementById(`bar-${day}`);
+    if (barElement) {
+      let hoverContent = barElement.querySelector(".hover-content");
+      hoverContent.textContent = `$${amount}`;
+    }
+  });
+  let totalAmount = Data.reduce((sum, current) => sum + current.amount, 0);
+  console.log("Total Amount:", totalAmount);
+  // const element = 10[i];
+}
+getingdata();
