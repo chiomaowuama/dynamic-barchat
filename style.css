@@ -2,9 +2,14 @@
   margin: 0px;
   padding: 0px;
 }
-.chat-container {
-  width: 70%;
+.body {
+  height: 100vh;
 }
-#canvas {
-  width: 100%;
+/* my barchat */
+.the-bar-container {
+  border: 2px solid red;
+  height: 80%;
+}
+.the-bars {
+  border: 2px solid green;
 }
