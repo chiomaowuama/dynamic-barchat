@@ -2,8 +2,25 @@
   margin: 0px;
   padding: 0px;
 }
-.body {
+body {
   height: 100vh;
+  border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.work-wrapper {
+  border: 2px solid green;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.toppart {
+  border: 2px solid blue;
+}
+.buttompart {
+  border: 2px solid yellow;
 }
 /* my barchat */
 .the-bar-container {
