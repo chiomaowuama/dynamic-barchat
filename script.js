@@ -7,7 +7,6 @@ async function getingdata() {
       day: data.day,
     };
   });
-  console.log(Data);
 
   Data.forEach((data) => {
     let day = data.day.toLowerCase();
@@ -21,6 +20,5 @@ async function getingdata() {
   });
   let totalAmount = Data.reduce((sum, current) => sum + current.amount, 0);
   console.log("Total Amount:", totalAmount);
-  // const element = 10[i];
 }
 getingdata();
