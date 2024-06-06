@@ -1,17 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 * {
   margin: 0px;
   padding: 0px;
 }
 body {
   height: 100vh;
-  border: 2px solid green;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: hsl(27, 66%, 92%);
+  font-family: "DM Sans", sans-serif;
 }
 .work-wrapper {
-  border: 2px solid green;
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -19,13 +19,12 @@ body {
   height: 80%;
 }
 .toppart {
-  border: 2px solid blue;
   height: 20%;
   display: flex;
   background-color: hsl(10, 71%, 57%);
+  border-radius: 15px;
 }
 .my-balace {
-  border: 2px solid yellow;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -35,23 +34,26 @@ body {
   color: white;
 }
 .logo {
-  border: 2px solid green;
   width: 50%;
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: ;
+  padding: 0 5%;
 }
 
 /* the bottom */
 .buttompart {
   background-color: hsl(33, 100%, 98%);
-  border: 2px solid yellow;
   padding: 0% 3%;
   padding-bottom: 5%;
   padding-top: 5%;
   border-radius: 18px;
   height: 80%;
+}
+.spendingtext {
+  font-family: 700;
+  font-size: 25px;
+  color: #382314;
 }
 /* my barchat */
 
@@ -191,4 +193,108 @@ body {
 }
 .percentage {
   font-weight: bold;
+}
+/* tablet  */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .work-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 80%;
+  }
+  .buttompart {
+    background-color: hsl(33, 100%, 98%);
+    padding: 0% 3%;
+    padding-bottom: -30%;
+    padding-top: 5%;
+    border-radius: 18px;
+    height: 80%;
+  }
+  .toppart {
+    height: 20%;
+    display: flex;
+    background-color: hsl(10, 71%, 57%);
+    border-radius: 15px;
+  }
+  .my-balace {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    font-size: 20px;
+    padding: 0 8%;
+    color: white;
+  }
+  .my-balace h2 {
+    font-size: 45px;
+  }
+  .logo {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 5%;
+  }
+
+  .spendingtext {
+    font-family: 700;
+    font-size: 40px;
+    color: #382314;
+  }
+  /*Total pricing area */
+  .total-price {
+    display: flex;
+    margin: 2% auto;
+    padding: 2% 0;
+    color: #382314;
+    width: 90%;
+  }
+  .Total {
+    width: 50%;
+  }
+  .Total p {
+    font-size: 20px;
+  }
+  .Total h1 {
+    font-size: 40px;
+  }
+  .period {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    font-size: 20px;
+  }
+  .percentage {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .hover-trigger:hover + .hover-content {
+    display: block;
+    font-size: 23px;
+    background-color: #382314;
+    color: white;
+    width: 80%;
+    padding: 5% 4%;
+    border-radius: 4px;
+  }
+}
+/* phone */
+@media only screen and (min-width: 200px) and (max-width: 767px) and (orientation: portrait) {
+  .work-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 80%;
+  }
+
+  .spendingtext {
+    font-family: 700;
+    font-size: 20px;
+    color: #382314;
+  }
 }
